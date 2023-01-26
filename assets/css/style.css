@@ -65,6 +65,22 @@ p {
     }
 }
 
+@keyframes boom {
+    0% {
+
+        transform: scale(0);
+    }
+
+    50% {
+
+        transform: scale(102%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
 .main-content {
     margin: 0 auto;
     max-width: 120rem;
@@ -76,10 +92,15 @@ p {
 }
 
 .bg-1 {
+    width: 100%;
+    background-color: blue;
     background-image: url(../img/bg-section1.svg);
-    background-position: bottom bottom;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
     background-size: cover;
-    background-attachment: fixed;
+    /* resize: both; */
+    /* overflow: auto; */
+    height: 1218px;
     color: #ffff;
 }
 
@@ -119,7 +140,7 @@ p {
 
 .intro input,
 .callToAction input {
-    padding: 1rem;
+    padding: 2rem;
     border: none;
     outline: none;
     width: 25rem;
@@ -127,7 +148,7 @@ p {
 
 .intro button,
 .callToAction button {
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-transform: uppercase;
     background-color: var(--red-color);
     color: #fff;
@@ -290,17 +311,17 @@ p {
 .bgCallToAction {
     background-color: #000;
     color: #ffff;
-    padding: var(--padding);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    padding: 7rem var(--padding);
     background-attachment: fixed;
-    height: 25rem;
+
 
 }
 
 .callToAction {
+    padding: var(--padding);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -320,28 +341,27 @@ p {
 }
 
 
+
 .bg-bio {
     background-image: url(/assets/img/bg-bio.svg);
-    background-position: center center;
-    background-size: cover;
-    height: 60rem;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    background-repeat: no-repeat;
+    height: 662px;
     color: #fff;
+    padding: var(--padding);
 }
 
-.bio {
-    width: 50rem;
-    padding: var(--padding);
-    margin-right: 3rem;
-}
 
 .bio h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
     position: relative;
 }
+
+
+.bio p {
+    width: 50%;
+}
+
 
 .bio h1::before {
     content: 'com quem você aprenderá?';
@@ -351,6 +371,8 @@ p {
     position: absolute;
     bottom: 6rem;
 }
+
+
 
 .foot {
     background-color: var(--bg-foot);
@@ -382,23 +404,6 @@ p {
 [data-anime="top"] {
     transform: translate3d(0, 100px, 0);
 }
-
-@keyframes boom {
-    0% {
-
-        transform: scale(0);
-    }
-
-    50% {
-
-        transform: scale(102%);
-    }
-
-    100% {
-        transform: scale(100%);
-    }
-}
-
 
 
 [data-anime].animate {
