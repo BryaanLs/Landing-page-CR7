@@ -92,16 +92,23 @@ p {
 }
 
 .bg-1 {
-    width: 100%;
-    background-color: blue;
+    /* width: 100%; */
     background-image: url(../img/bg-section1.svg);
     background-repeat: no-repeat;
-    /* background-position: center center; */
+    background-position: center center;
     background-size: cover;
-    /* resize: both; */
-    /* overflow: auto; */
+    background-attachment: fixed;
+
     height: 1218px;
     color: #ffff;
+
+
+}
+
+@media (min-width: 1820px) {
+    .bg-1 {
+        height: 100vh;
+    }
 }
 
 #logo {
@@ -345,10 +352,21 @@ p {
 .bg-bio {
     background-image: url(/assets/img/bg-bio.svg);
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* background-attachment: fixed; */
     height: 662px;
     color: #fff;
     padding: var(--padding);
 }
+
+.bio {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: left;
+    background-color: blue;
+}
+
 
 
 .bio h1 {
@@ -358,9 +376,6 @@ p {
 }
 
 
-.bio p {
-    width: 50%;
-}
 
 
 .bio h1::before {
@@ -405,23 +420,14 @@ p {
     transform: translate3d(0, 100px, 0);
 }
 
-
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     animation: boom 1s normal;
 }
 
-/* @media (min-width: 1500px) {
-    .bg-1 {
-        background-position: top;
-        background-size: cover;
-    }
-
-} */
 
 @media (max-width:1100px) {
-
 
     .right-picture,
     .left-picture {
