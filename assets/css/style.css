@@ -97,12 +97,6 @@ p {
 
 }
 
-@media (min-width: 1820px) {
-    .bg-1 {
-        height: 100vh;
-    }
-}
-
 #logo {
     width: 13rem;
     height: 13rem;
@@ -111,6 +105,7 @@ p {
 .intro {
     padding: var(--padding);
     display: flex;
+    justify-content: center;
     flex-flow: column nowrap;
     animation: entrada 1s normal;
 
@@ -130,7 +125,6 @@ p {
 .intro form,
 .callToAction form {
     width: max-content;
-    background-color: red;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -155,7 +149,6 @@ p {
     cursor: pointer;
 }
 
-/* SCOND SECTION */
 
 .bg-2 {
     background-color: var(--red-color);
@@ -339,8 +332,6 @@ p {
     bottom: 4rem;
 }
 
-
-
 .bg-bio {
     background-image: url(/assets/img/bg-bio.svg);
     background-repeat: no-repeat;
@@ -349,24 +340,25 @@ p {
     height: 662px;
     color: #fff;
     padding: var(--padding);
-    display: grid;
-    /* justify-content: end; */
+    display: flex;
     align-items: center;
-    border: 1px solid white;
 }
 
 .bio {
-    display: grid;
-    grid-template-columns: 1fr;
-    flex-flow: column wrap;
-    align-items: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-    background-color: blue;
+.bio-content {
+    width: 50rem;
+    padding: var(--padding) 0;
 }
 
 
 
-.bio h1 {
+.bio-content h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
     position: relative;
@@ -375,13 +367,13 @@ p {
 
 
 
-.bio h1::before {
+.bio-content h1::before {
     content: 'com quem você aprenderá?';
     font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
     position: absolute;
-    bottom: 6rem;
+    bottom: 5rem;
 }
 
 
@@ -423,49 +415,9 @@ p {
     animation: boom 1s normal;
 }
 
-
-@media (max-width:1100px) {
-
-    .right-picture,
-    .left-picture {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin-bottom: 5rem;
-
-    }
-
-    .right-picture img,
-    .left-picture img {
-        width: 36rem;
-        margin: 1rem;
-    }
-
-    .text-picture-right,
-    .text-picture-left {
-        position: unset;
-        width: max-content;
-        height: max-content;
-    }
-
-    .text-picture-right::after,
-    .text-picture-left::after {
-        display: none;
-    }
-
-}
-
-@media (max-width:800px) {
-
-    .left-picture,
-    .right-picture {
-        flex-direction: column;
-    }
-
-    .text-picture-left,
-    .text-picture-right {
-        width: auto;
-        margin-top: 2rem;
+@media (min-width: 1820px) {
+    .bg-1 {
+        height: 150vh;
     }
 }
 
