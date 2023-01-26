@@ -5,7 +5,6 @@
     --bg-foot: #151515;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -54,25 +53,26 @@ p {
     font-size: 1.5rem;
 }
 
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translate(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0rem);
+    }
+}
+
 .main-content {
     margin: 0 auto;
     max-width: 120rem;
 }
 
-@keyframes entrada {
-    0% {
-        opacity: 0;
-        transform: translateY(-50rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0rem);
-    }
-}
-
 .section {
     min-height: 100vh;
+    padding: var(--padding);
 }
 
 .bg-1 {
@@ -286,7 +286,6 @@ p {
     display: none;
 }
 
-/* Section 3 */
 
 .bgCallToAction {
     background-color: #000;
@@ -362,6 +361,105 @@ p {
     align-items: center;
 }
 
+
+[data-anime] {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+[data-anime="down"] {
+    transform: translate3d(0, -100px, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-100px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(100px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, 100px, 0);
+}
+
+@keyframes boom {
+    0% {
+
+        transform: scale(0);
+    }
+
+    50% {
+
+        transform: scale(102%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    animation: boom 1s normal;
+}
+
+/* @media (min-width: 1500px) {
+    .bg-1 {
+        background-position: top;
+        background-size: cover;
+    }
+
+} */
+
+@media (max-width:1100px) {
+
+
+    .right-picture,
+    .left-picture {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 5rem;
+
+    }
+
+    .right-picture img,
+    .left-picture img {
+        width: 36rem;
+        margin: 1rem;
+    }
+
+    .text-picture-right,
+    .text-picture-left {
+        position: unset;
+        width: max-content;
+        height: max-content;
+    }
+
+    .text-picture-right::after,
+    .text-picture-left::after {
+        display: none;
+    }
+
+}
+
+@media (max-width:800px) {
+
+    .left-picture,
+    .right-picture {
+        flex-direction: column;
+    }
+
+    .text-picture-left,
+    .text-picture-right {
+        width: auto;
+        margin-top: 2rem;
+    }
+}
 
 ::-webkit-scrollbar {
     width: 1rem;
