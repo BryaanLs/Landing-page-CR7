@@ -86,19 +86,11 @@ p {
     max-width: 120rem;
 }
 
-.section {
-    min-height: 100vh;
-    padding: var(--padding);
-}
-
 .bg-1 {
-    /* width: 100%; */
     background-image: url(../img/bg-section1.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
-
     height: 1218px;
     color: #ffff;
 
@@ -354,16 +346,21 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* background-attachment: fixed; */
     height: 662px;
     color: #fff;
     padding: var(--padding);
+    display: grid;
+    /* justify-content: end; */
+    align-items: center;
+    border: 1px solid white;
 }
 
 .bio {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-flow: column wrap;
     align-items: left;
+
     background-color: blue;
 }
 
