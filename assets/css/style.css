@@ -1,0 +1,374 @@
+:root {
+    --red-color: #FE1623;
+    --card-color: rgba(0, 0, 0, 0.5);
+    --padding: 3rem;
+    --bg-foot: #151515;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Inter';
+}
+
+h1 {
+    font-size: 6.4rem;
+}
+
+h2 {
+    font-size: 5.4rem;
+}
+
+h3 {
+    font-size: 4.4rem;
+}
+
+h4 {
+    font-size: 3.4rem;
+}
+
+h5 {
+    font-size: 2.4rem;
+}
+
+h6 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.main-content {
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.bg-1 {
+    background-image: url(../img/bg-section1.svg);
+    background-position: bottom bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffff;
+}
+
+#logo {
+    width: 13rem;
+    height: 13rem;
+}
+
+.intro {
+    padding: var(--padding);
+    display: flex;
+    flex-flow: column nowrap;
+    animation: entrada 1s normal;
+
+}
+
+.intro h1 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.intro p {
+    width: 40rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.intro form,
+.callToAction form {
+    width: max-content;
+    background-color: red;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.intro input,
+.callToAction input {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    width: 25rem;
+}
+
+.intro button,
+.callToAction button {
+    padding: 1rem;
+    text-transform: uppercase;
+    background-color: var(--red-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* SCOND SECTION */
+
+.bg-2 {
+    background-color: var(--red-color);
+    color: #ffff;
+    min-height: 100vh;
+}
+
+.bg-2 h1,
+.bg-2 h2 {
+    text-align: center;
+}
+
+.bg-2 h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
+
+.bg-2 h2 {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--padding) var(--padding);
+}
+
+.left-picture {
+    position: relative;
+    display: flex;
+    max-width: 120rem;
+    padding: 1rem var(--padding);
+}
+
+.left-picture img {
+    border-top-right-radius: 2rem;
+}
+
+.left-picture img {
+    border-bottom-right-radius: 2rem;
+}
+
+.text-picture-left {
+    padding: var(--padding);
+    background-color: var(--card-color);
+    position: absolute;
+    width: 52rem;
+    height: 24rem;
+    top: 10rem;
+    left: 25rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.text-picture-left h2 {
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.text-picture-left h3 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.text-picture-left p {
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.text-picture-left::after {
+    content: '';
+    width: 16rem;
+    height: 21rem;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-top-right-radius: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: 12rem;
+    left: 52rem;
+}
+
+
+.right-picture {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 120rem;
+}
+
+.right-picture img {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.text-picture-right {
+    padding: var(--padding);
+    background-color: var(--card-color);
+    position: absolute;
+    width: 52rem;
+    height: 24rem;
+    top: 10rem;
+    left: 30rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.text-picture-right h2 {
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.text-picture-right h3 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.text-picture-right p {
+    padding: 1rem 0;
+    text-align: left;
+}
+
+.text-picture-right::after {
+    content: '';
+    width: 16rem;
+    height: 21rem;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-top-left-radius: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: 12rem;
+    right: 52rem;
+}
+
+.card>div:nth-child(5)>.text-picture-right::after {
+    display: none;
+}
+
+/* Section 3 */
+
+.bgCallToAction {
+    background-color: #000;
+    color: #ffff;
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-attachment: fixed;
+    height: 25rem;
+
+}
+
+.callToAction {
+    display: flex;
+}
+
+
+.callToAction h1 {
+    font-size: 3rem;
+    margin-right: 10rem;
+    position: relative;
+}
+
+.callToAction h1::before {
+    content: 'vai ficar de fora?';
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 4rem;
+}
+
+
+.bg-bio {
+    background-image: url(/assets/img/bg-bio.svg);
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #fff;
+}
+
+.bio {
+    width: 50rem;
+    padding: var(--padding);
+    margin-right: 3rem;
+}
+
+.bio h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.bio h1::before {
+    content: 'com quem você aprenderá?';
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 6rem;
+}
+
+.foot {
+    background-color: var(--bg-foot);
+    color: #ffff;
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--bg-foot);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 2rem;
+}
